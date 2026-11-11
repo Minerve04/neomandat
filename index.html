@@ -15,7 +15,7 @@
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="NeoMandat">
 <meta property="og:title" content="NeoMandat — Les vendeurs de demain ont déjà reçu leur DPE">
-<meta property="og:description" content="Radar DPE + courrier postal automatique + estimation en ligne : la prospection vendeurs des agents immobiliers, en pilote automatique.">
+<meta property="og:description" content="Radar de tous les nouveaux DPE + courrier postal à votre nom + estimation en ligne : la prospection vendeurs des agents immobiliers, sans y passer vos journées.">
 <meta property="og:url" content="https://neomandat.fr/">
 <meta property="og:image" content="https://neomandat.fr/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -31,7 +31,7 @@
   "@graph": [
     {"@type": "Organization", "@id": "https://neomandat.fr/#org", "name": "NeoMandat", "url": "https://neomandat.fr/", "logo": "https://neomandat.fr/logo-512.png", "email": "julie@neomandat.fr", "areaServed": "FR"},
     {"@type": "SoftwareApplication", "name": "NeoMandat", "applicationCategory": "BusinessApplication", "operatingSystem": "Web",
-     "description": "Détection de tous les nouveaux DPE (A à G), courrier postal automatique aux propriétaires et page d'estimation pour agents immobiliers.",
+     "description": "Détection de tous les nouveaux DPE (A à G), courrier postal aux propriétaires choisis par l'agent et page d'estimation pour agents immobiliers.",
      "publisher": {"@id": "https://neomandat.fr/#org"},
      "offers": [
        {"@type": "Offer", "name": "Solo", "price": "149", "priceCurrency": "EUR", "description": "1 secteur exclusif, 40 courriers par mois"},
@@ -42,7 +42,7 @@
       {"@type": "Question", "name": "D'où viennent les données ?", "acceptedAnswer": {"@type": "Answer", "text": "Les DPE proviennent de la base publique de l'ADEME. Les estimations Valeur Maison s'appuient sur les transactions publiées dans DVF (Demandes de valeurs foncières)."}},
       {"@type": "Question", "name": "Le courrier est-il conforme au RGPD ?", "acceptedAnswer": {"@type": "Answer", "text": "Le courrier est adressé au propriétaire de l'adresse du logement, sans nom. Chaque envoi comporte une mention d'opposition et les adresses opposées sont exclues définitivement."}},
       {"@type": "Question", "name": "Que veut dire secteur exclusif ?", "acceptedAnswer": {"@type": "Answer", "text": "Tant que votre abonnement est actif, aucune autre agence ne reçoit les signaux de vos codes postaux."}},
-      {"@type": "Question", "name": "Puis-je relire les courriers avant envoi ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Envoi automatique ou validation manuelle, signal par signal. Le modèle de lettre est personnalisable."}},
+      {"@type": "Question", "name": "Puis-je relire les courriers avant envoi ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Aucun courrier ne part sans votre accord : vous choisissez, logement par logement, à qui écrire. Le modèle de lettre est à votre en-tête."}},
       {"@type": "Question", "name": "Y a-t-il un engagement ?", "acceptedAnswer": {"@type": "Answer", "text": "Aucun. L'abonnement mensuel se résilie à tout moment ; l'annuel offre deux mois."}}
     ]}
   ]
@@ -76,7 +76,7 @@
   <div class="hero-text">
     <p class="mono kicker">Radar DPE · Courrier postal · Estimation en ligne</p>
     <h1 id="h1">Les vendeurs de demain ont déjà reçu leur DPE.</h1>
-    <p class="hero-lead">Chaque matin, NeoMandat repère tous les nouveaux DPE de votre secteur, de A à G, écrit au propriétaire à votre nom et vous livre ses demandes d'estimation.</p>
+    <p class="hero-lead">Chaque matin, NeoMandat repère tous les nouveaux DPE de votre secteur, de A à G. Vous choisissez à qui écrire : le courrier part à votre nom, et vous recevez les demandes d'estimation.</p>
     <form class="cp-form" id="reserver" onsubmit="return reserver(event)">
       <label for="cp" class="sr-only">Code postal de votre agence</label>
       <input id="cp" name="cp" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="Code postal de votre agence" required>
@@ -146,7 +146,7 @@
         <div class="pillar-body">
           <p class="mono pill-tag"><b class="g">G</b>Radar DPE</p>
           <h3>Chaque nouveau DPE de vos rues, de A à G, chaque matin.</h3>
-          <p>Le radar interroge la base officielle de l'ADEME, repère chaque nouveau diagnostic de vos secteurs et prépare un courrier sobre, signé de votre agence, posté pour vous.</p>
+          <p>Le radar interroge la base officielle de l'ADEME, repère chaque nouveau diagnostic de vos secteurs. Vous cochez les logements qui vous intéressent : NeoMandat imprime et poste un courrier sobre, signé de votre agence.</p>
           <ul class="ticks"><li>Filtres étiquette, surface, type de bien</li><li>Courrier imprimé, mis sous pli, affranchi</li><li>QR code unique pour mesurer chaque retour</li></ul>
         </div>
       </article>
@@ -171,7 +171,7 @@
     <ol class="steps">
       <li><span class="mono">01</span><h3>Réservez vos secteurs</h3><p>Un code postal, une agence. Une fois pris, votre secteur n'est plus proposé à la concurrence.</p></li>
       <li><span class="mono">02</span><h3>Le radar détecte</h3><p>Les nouveaux DPE de A à G arrivent dans votre tableau de bord, classés par potentiel.</p></li>
-      <li><span class="mono">03</span><h3>Le courrier part</h3><p>Automatiquement ou après validation, à votre en-tête, avec votre signature.</p></li>
+      <li><span class="mono">03</span><h3>Vous choisissez, le courrier part</h3><p>Un clic par logement retenu : courrier à votre en-tête, avec votre signature, posté le jour même.</p></li>
       <li><span class="mono">04</span><h3>Le vendeur vous appelle</h3><p>Il estime son bien sur Valeur Maison. Vous recevez le lead, prêt pour le rendez-vous.</p></li>
     </ol>
   </div>
@@ -239,7 +239,7 @@
       <details><summary>D'où viennent les données ?</summary><p>Les DPE proviennent de la base publique de l'ADEME, mise à jour en continu. Les estimations Valeur Maison s'appuient sur les transactions publiées dans DVF (Demandes de valeurs foncières).</p></details>
       <details><summary>Le courrier est-il conforme au RGPD ?</summary><p>Le courrier est adressé « au propriétaire » de l'adresse du logement, sans nom. Chaque envoi comporte une mention d'opposition, et les adresses opposées sont exclues définitivement.</p></details>
       <details><summary>Que veut dire « secteur exclusif » ?</summary><p>Tant que votre abonnement est actif, aucune autre agence ne reçoit les signaux de vos codes postaux. Premier arrivé, premier servi.</p></details>
-      <details><summary>Puis-je relire les courriers avant envoi ?</summary><p>Oui. Choisissez l'envoi automatique ou la validation manuelle, signal par signal, depuis le dashboard. Le modèle de lettre est personnalisable.</p></details>
+      <details><summary>Puis-je relire les courriers avant envoi ?</summary><p>Oui. Aucun courrier ne part sans votre accord : chaque matin, vous choisissez dans votre tableau de bord, logement par logement, à qui écrire. Le modèle de lettre est à votre en-tête.</p></details>
       <details><summary>Y a-t-il un engagement ?</summary><p>Aucun. L'abonnement mensuel se résilie à tout moment. L'annuel vous fait économiser deux mois.</p></details>
     </div>
   </div>
