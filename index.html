@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NeoMandat — Détectez les vendeurs grâce aux DPE F et G | Prospection immobilière automatisée</title>
-<meta name="description" content="NeoMandat repère chaque jour les nouveaux DPE F et G de votre secteur, envoie un courrier à votre nom au propriétaire et transforme sa demande d'estimation en mandat. Secteur exclusif, sans engagement.">
+<title>NeoMandat — Détectez les vendeurs grâce aux nouveaux DPE | Prospection immobilière automatisée</title>
+<meta name="description" content="NeoMandat repère chaque jour tous les nouveaux DPE de votre secteur, envoie un courrier à votre nom au propriétaire et transforme sa demande d'estimation en mandat. Secteur exclusif, sans engagement.">
 <link rel="canonical" href="https://neomandat.fr/">
 <meta name="theme-color" content="#F7F5F0">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -31,7 +31,7 @@
   "@graph": [
     {"@type": "Organization", "@id": "https://neomandat.fr/#org", "name": "NeoMandat", "url": "https://neomandat.fr/", "logo": "https://neomandat.fr/logo-512.png", "email": "julie@neomandat.fr", "areaServed": "FR"},
     {"@type": "SoftwareApplication", "name": "NeoMandat", "applicationCategory": "BusinessApplication", "operatingSystem": "Web",
-     "description": "Détection des nouveaux DPE F et G, courrier postal automatique aux propriétaires et page d'estimation pour agents immobiliers.",
+     "description": "Détection de tous les nouveaux DPE (A à G), courrier postal automatique aux propriétaires et page d'estimation pour agents immobiliers.",
      "publisher": {"@id": "https://neomandat.fr/#org"},
      "offers": [
        {"@type": "Offer", "name": "Solo", "price": "149", "priceCurrency": "EUR", "description": "1 secteur exclusif, 40 courriers par mois"},
@@ -76,7 +76,7 @@
   <div class="hero-text">
     <p class="mono kicker">Radar DPE · Courrier postal · Estimation en ligne</p>
     <h1 id="h1">Les vendeurs de demain ont déjà reçu leur DPE.</h1>
-    <p class="hero-lead">Chaque matin, NeoMandat repère les nouveaux DPE F et G de votre secteur, écrit au propriétaire à votre nom et vous livre ses demandes d'estimation.</p>
+    <p class="hero-lead">Chaque matin, NeoMandat repère tous les nouveaux DPE de votre secteur, de A à G, écrit au propriétaire à votre nom et vous livre ses demandes d'estimation.</p>
     <form class="cp-form" id="reserver" onsubmit="return reserver(event)">
       <label for="cp" class="sr-only">Code postal de votre agence</label>
       <input id="cp" name="cp" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="Code postal de votre agence" required>
@@ -122,10 +122,10 @@
 <!-- LOI -->
 <section class="band section" aria-labelledby="loi">
   <div class="container">
-    <p class="mono kicker">Loi Climat et Résilience</p>
+    <p class="mono kicker">Pourquoi le DPE</p>
     <div class="split">
-      <h2 id="loi">Un flux continu de vendeurs. Personne ne les appelle encore.</h2>
-      <p class="lead-dim">Un bailleur dont le logement sort du marché locatif a trois options : rénover, laisser vacant ou vendre. Soyez la première agence à lui écrire.</p>
+      <h2 id="loi">Un DPE neuf, c'est un propriétaire qui bouge.</h2>
+      <p class="lead-dim">Le DPE est obligatoire avant toute mise en vente ou en location. Chaque diagnostic publié par l'ADEME signale un propriétaire en train de décider, avant même la première annonce. Pour les F et G, la loi Climat ajoute une échéance. Soyez la première agence à lui écrire.</p>
     </div>
     <div class="years">
       <div class="year"><span class="lbl" style="background:#D7221F">G</span><span class="num">2025</span><p>Interdits à la location : nouveaux baux et renouvellements.</p></div>
@@ -145,8 +145,8 @@
         <img src="https://images.unsplash.com/photo-1609604967645-008302195de4?w=1200&q=70&auto=format&fit=crop" alt="Maison de maître en briques" loading="lazy">
         <div class="pillar-body">
           <p class="mono pill-tag"><b class="g">G</b>Radar DPE</p>
-          <h3>Chaque nouveau DPE F ou G de vos rues, chaque matin.</h3>
-          <p>Le radar interroge la base officielle de l'ADEME, isole les passoires thermiques de vos secteurs et prépare un courrier sobre, signé de votre agence, posté pour vous.</p>
+          <h3>Chaque nouveau DPE de vos rues, de A à G, chaque matin.</h3>
+          <p>Le radar interroge la base officielle de l'ADEME, repère chaque nouveau diagnostic de vos secteurs et prépare un courrier sobre, signé de votre agence, posté pour vous.</p>
           <ul class="ticks"><li>Filtres étiquette, surface, type de bien</li><li>Courrier imprimé, mis sous pli, affranchi</li><li>QR code unique pour mesurer chaque retour</li></ul>
         </div>
       </article>
@@ -170,7 +170,7 @@
     <h2 id="fonct-t" class="h2-dark">Vous choisissez vos rues. NeoMandat prospecte.</h2>
     <ol class="steps">
       <li><span class="mono">01</span><h3>Réservez vos secteurs</h3><p>Un code postal, une agence. Une fois pris, votre secteur n'est plus proposé à la concurrence.</p></li>
-      <li><span class="mono">02</span><h3>Le radar détecte</h3><p>Les nouveaux DPE F et G arrivent dans votre tableau de bord, classés par potentiel.</p></li>
+      <li><span class="mono">02</span><h3>Le radar détecte</h3><p>Les nouveaux DPE de A à G arrivent dans votre tableau de bord, classés par potentiel.</p></li>
       <li><span class="mono">03</span><h3>Le courrier part</h3><p>Automatiquement ou après validation, à votre en-tête, avec votre signature.</p></li>
       <li><span class="mono">04</span><h3>Le vendeur vous appelle</h3><p>Il estime son bien sur Valeur Maison. Vous recevez le lead, prêt pour le rendez-vous.</p></li>
     </ol>
@@ -206,7 +206,7 @@
         <p class="price"><span data-m="149" data-y="1490">149 €</span><small>HT / mois</small></p>
         <p class="billed mono" hidden>Facturé 1 490 € HT / an</p>
         <a class="btn btn-ink-line" href="https://neo-dpe-mandat-local.lovable.app/inscription?formule=solo">Démarrer avec Solo</a>
-        <ul class="ticks ticks-ink"><li>1 secteur exclusif (1 code postal)</li><li>Radar DPE F et G quotidien</li><li>40 courriers postés / mois</li><li>Dashboard et alertes e-mail</li></ul>
+        <ul class="ticks ticks-ink"><li>1 secteur exclusif (1 code postal)</li><li>Radar quotidien, tous les DPE de A à G</li><li>40 courriers postés / mois</li><li>Dashboard et alertes e-mail</li></ul>
       </article>
       <article class="plan featured">
         <span class="badge mono">Le plus choisi</span>
@@ -215,7 +215,7 @@
         <p class="price"><span data-m="299" data-y="2990">299 €</span><small>HT / mois</small></p>
         <p class="billed mono" hidden>Facturé 2 990 € HT / an</p>
         <a class="btn btn-solid" href="https://neo-dpe-mandat-local.lovable.app/inscription?formule=agence">Réserver mes secteurs</a>
-        <ul class="ticks"><li>3 secteurs exclusifs</li><li>Radar DPE F, G et E en option</li><li>120 courriers postés / mois</li><li>Valeur Maison à vos couleurs</li><li>Suivi QR code et 3 utilisateurs</li></ul>
+        <ul class="ticks"><li>3 secteurs exclusifs</li><li>Radar quotidien, tous les DPE, filtrable par classe</li><li>120 courriers postés / mois</li><li>Valeur Maison à vos couleurs</li><li>Suivi QR code et 3 utilisateurs</li></ul>
       </article>
       <article class="plan">
         <p class="mono plan-name">Réseau</p>
