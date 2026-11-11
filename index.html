@@ -34,14 +34,14 @@
      "description": "Détection de tous les nouveaux DPE (A à G), courrier postal aux propriétaires choisis par l'agent et page d'estimation pour agents immobiliers.",
      "publisher": {"@id": "https://neomandat.fr/#org"},
      "offers": [
-       {"@type": "Offer", "name": "Solo", "price": "90", "priceCurrency": "EUR", "description": "1 secteur exclusif, 20 courriers par mois"},
+       {"@type": "Offer", "name": "Solo", "price": "90", "priceCurrency": "EUR", "description": "1 code postal (secteur partagé), 20 courriers par mois"},
        {"@type": "Offer", "name": "Agence", "price": "299", "priceCurrency": "EUR", "description": "3 secteurs exclusifs, 120 courriers par mois, Valeur Maison"},
        {"@type": "Offer", "name": "Réseau", "price": "990", "priceCurrency": "EUR", "description": "10 secteurs exclusifs, 350 courriers par mois"}
      ]},
     {"@type": "FAQPage", "mainEntity": [
       {"@type": "Question", "name": "D'où viennent les données ?", "acceptedAnswer": {"@type": "Answer", "text": "Les DPE proviennent de la base publique de l'ADEME. Les estimations Valeur Maison s'appuient sur les transactions publiées dans DVF (Demandes de valeurs foncières)."}},
       {"@type": "Question", "name": "Le courrier est-il conforme au RGPD ?", "acceptedAnswer": {"@type": "Answer", "text": "Le courrier est adressé au propriétaire de l'adresse du logement, sans nom. Chaque envoi comporte une mention d'opposition et les adresses opposées sont exclues définitivement."}},
-      {"@type": "Question", "name": "Que veut dire secteur exclusif ?", "acceptedAnswer": {"@type": "Answer", "text": "Tant que votre abonnement est actif, aucune autre agence ne reçoit les signaux de vos codes postaux."}},
+      {"@type": "Question", "name": "Que veut dire secteur exclusif ?", "acceptedAnswer": {"@type": "Answer", "text": "Avec les formules Agence et Réseau, tant que votre abonnement est actif, aucune autre agence ne reçoit les signaux de vos codes postaux. La formule Solo est un secteur partagé : plusieurs agents Solo peuvent suivre le même code postal et se répartissent les nouveaux DPE, sans jamais écrire deux fois au même propriétaire."}},
       {"@type": "Question", "name": "Puis-je relire les courriers avant envoi ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Aucun courrier ne part sans votre accord : vous choisissez, logement par logement, à qui écrire. Le modèle de lettre est à votre en-tête."}},
       {"@type": "Question", "name": "Y a-t-il un engagement ?", "acceptedAnswer": {"@type": "Answer", "text": "Aucun. L'abonnement mensuel se résilie à tout moment ; l'annuel offre deux mois."}}
     ]}
@@ -206,7 +206,7 @@
         <p class="price"><span data-m="90" data-y="900">90 €</span><small>HT / mois</small></p>
         <p class="billed mono" hidden>Facturé 900 € HT / an</p>
         <a class="btn btn-ink-line" href="https://neo-dpe-mandat-local.lovable.app/inscription?formule=solo">Démarrer avec Solo</a>
-        <ul class="ticks ticks-ink"><li>1 secteur exclusif (1 code postal)</li><li>Radar quotidien, tous les DPE de A à G</li><li>20 courriers postés / mois</li><li>Dashboard et alertes e-mail</li></ul>
+        <ul class="ticks ticks-ink"><li>1 code postal (secteur partagé)</li><li>Radar quotidien, tous les DPE de A à G</li><li>20 courriers postés / mois</li><li>Dashboard et alertes e-mail</li></ul>
       </article>
       <article class="plan featured">
         <span class="badge mono">Le plus choisi</span>
@@ -238,7 +238,7 @@
     <div class="faq">
       <details><summary>D'où viennent les données ?</summary><p>Les DPE proviennent de la base publique de l'ADEME, mise à jour en continu. Les estimations Valeur Maison s'appuient sur les transactions publiées dans DVF (Demandes de valeurs foncières).</p></details>
       <details><summary>Le courrier est-il conforme au RGPD ?</summary><p>Le courrier est adressé « au propriétaire » de l'adresse du logement, sans nom. Chaque envoi comporte une mention d'opposition, et les adresses opposées sont exclues définitivement.</p></details>
-      <details><summary>Que veut dire « secteur exclusif » ?</summary><p>Tant que votre abonnement est actif, aucune autre agence ne reçoit les signaux de vos codes postaux. Premier arrivé, premier servi.</p></details>
+      <details><summary>Que veut dire « secteur exclusif » ?</summary><p>Avec les formules Agence et Réseau, tant que votre abonnement est actif, aucune autre agence ne reçoit les signaux de vos codes postaux. Premier arrivé, premier servi. La formule Solo est un secteur partagé : plusieurs agents Solo peuvent suivre le même code postal et se répartissent les nouveaux DPE ; un propriétaire ne reçoit jamais deux courriers.</p></details>
       <details><summary>Puis-je relire les courriers avant envoi ?</summary><p>Oui. Aucun courrier ne part sans votre accord : chaque matin, vous choisissez dans votre tableau de bord, logement par logement, à qui écrire. Le modèle de lettre est à votre en-tête.</p></details>
       <details><summary>Y a-t-il un engagement ?</summary><p>Aucun. L'abonnement mensuel se résilie à tout moment. L'annuel vous fait économiser deux mois.</p></details>
     </div>
@@ -251,7 +251,7 @@
     <div class="cta-text">
       <p class="mono kicker">Exclusivité par code postal</p>
       <h2 id="cta-t">Votre secteur est peut-être encore libre.</h2>
-      <p class="lead-ink">Une seule agence par code postal. Réservez le vôtre avant un concurrent.</p>
+      <p class="lead-ink">Avec Agence et Réseau, une seule agence par code postal. Réservez le vôtre avant un concurrent.</p>
       <a href="#reserver" class="btn btn-solid">Vérifier mon code postal</a>
     </div>
     <img src="https://images.unsplash.com/photo-1667601080030-b286a6ffeb67?w=1400&q=70&auto=format&fit=crop" alt="Maison de maître en briques au crépuscule" loading="lazy">
