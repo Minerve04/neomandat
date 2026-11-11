@@ -166,3 +166,6 @@ b.g{background:var(--g)}b.f{background:var(--f);color:var(--ink)}b.e{background:
 .nav-login{font-weight:500;color:var(--ink);text-decoration:none;font-size:15px}
 .nav-login:hover{color:var(--accent)}
 @media (max-width:720px){.nav-cta{gap:12px}.nav-cta .btn{padding:9px 12px;font-size:13px}}
+.logo-img{display:block;height:38px;width:auto}
+.logo-img-foot{height:32px}
+@media (max-width:600px){.logo-img{height:32px}}
