@@ -61,7 +61,10 @@
       <a href="#tarifs">Tarifs</a>
       <a href="#faq">FAQ</a>
     </div>
-    <a href="#reserver" class="btn btn-line">Réserver mon secteur</a>
+    <div class="nav-cta">
+      <a href="https://neo-dpe-mandat-local.lovable.app/connexion" class="nav-login">Connexion</a>
+      <a href="#reserver" class="btn btn-line">Réserver mon secteur</a>
+    </div>
   </nav>
 </header>
 
@@ -201,7 +204,7 @@
         <p class="plan-desc">Pour l'agent indépendant ou le mandataire qui veut son propre flux de vendeurs.</p>
         <p class="price"><span data-m="149" data-y="1490">149 €</span><small>HT / mois</small></p>
         <p class="billed mono" hidden>Facturé 1 490 € HT / an</p>
-        <a class="btn btn-ink-line" href="mailto:julie@neomandat.fr?subject=NeoMandat%20%E2%80%94%20Formule%20Solo">Démarrer avec Solo</a>
+        <a class="btn btn-ink-line" href="https://neo-dpe-mandat-local.lovable.app/inscription?formule=solo">Démarrer avec Solo</a>
         <ul class="ticks ticks-ink"><li>1 secteur exclusif (1 code postal)</li><li>Radar DPE F et G quotidien</li><li>40 courriers postés / mois</li><li>Dashboard et alertes e-mail</li></ul>
       </article>
       <article class="plan featured">
@@ -210,7 +213,7 @@
         <p class="plan-desc">Pour l'agence qui veut verrouiller son territoire et convertir avec Valeur Maison.</p>
         <p class="price"><span data-m="299" data-y="2990">299 €</span><small>HT / mois</small></p>
         <p class="billed mono" hidden>Facturé 2 990 € HT / an</p>
-        <a class="btn btn-solid" href="mailto:julie@neomandat.fr?subject=NeoMandat%20%E2%80%94%20Formule%20Agence">Réserver mes secteurs</a>
+        <a class="btn btn-solid" href="https://neo-dpe-mandat-local.lovable.app/inscription?formule=agence">Réserver mes secteurs</a>
         <ul class="ticks"><li>3 secteurs exclusifs</li><li>Radar DPE F, G et E en option</li><li>120 courriers postés / mois</li><li>Valeur Maison à vos couleurs</li><li>Suivi QR code et 3 utilisateurs</li></ul>
       </article>
       <article class="plan">
@@ -218,7 +221,7 @@
         <p class="plan-desc">Pour les groupes multi-agences et les réseaux de mandataires.</p>
         <p class="price"><span data-m="990" data-y="9900">990 €</span><small>HT / mois</small></p>
         <p class="billed mono" hidden>Facturé 5 900 € HT / an</p>
-        <a class="btn btn-ink-line" href="mailto:julie@neomandat.fr?subject=NeoMandat%20%E2%80%94%20Formule%20R%C3%A9seau">Parler à l'équipe</a>
+        <a class="btn btn-ink-line" href="https://neo-dpe-mandat-local.lovable.app/inscription?formule=reseau">Démarrer avec Réseau</a>
         <ul class="ticks ticks-ink"><li>10 secteurs exclusifs</li><li>350 courriers postés / mois</li><li>Répartition des leads par agence</li><li>Utilisateurs illimités, export CRM</li></ul>
       </article>
     </div>
@@ -260,7 +263,7 @@
   <div class="container foot">
     <span class="logo-word">NEOMANDAT</span>
     <nav aria-label="Liens légaux" class="foot-links mono">
-      <a href="#tarifs">Tarifs</a><a href="#faq">FAQ</a><a href="/mentions-legales.html">Mentions légales</a><a href="/confidentialite.html">Confidentialité</a><a href="mailto:julie@neomandat.fr">Contact</a>
+      <a href="#tarifs">Tarifs</a><a href="#faq">FAQ</a><a href="https://neo-dpe-mandat-local.lovable.app/connexion">Espace agent</a><a href="/mentions-legales.html">Mentions légales</a><a href="/confidentialite.html">Confidentialité</a><a href="mailto:julie@neomandat.fr">Contact</a>
     </nav>
     <span class="mono">© 2026 NeoMandat</span>
   </div>
@@ -280,8 +283,8 @@ function reserver(e){
   e.preventDefault();
   var cp=document.getElementById('cp').value.replace(/\D/g,''), msg=document.getElementById('cp-msg');
   if(cp.length!==5){ msg.textContent='Saisissez un code postal à 5 chiffres.'; return false; }
-  msg.textContent='Votre messagerie s’ouvre pour réserver le secteur '+cp+'.';
-  location.href='mailto:julie@neomandat.fr?subject='+encodeURIComponent('Réservation du secteur '+cp)+'&body='+encodeURIComponent('Bonjour,\n\nJe souhaite réserver le secteur '+cp+' sur NeoMandat.\n\nAgence :\nTéléphone :\n');
+  msg.textContent='Vérification du secteur '+cp+'…';
+  location.href='https://neo-dpe-mandat-local.lovable.app/inscription?cp='+cp;
   return false;
 }
 </script>

@@ -160,3 +160,9 @@ b.g{background:var(--g)}b.f{background:var(--f);color:var(--ink)}b.e{background:
 .legal a{color:var(--accent-d)}
 
 @media (max-width:600px){.container{padding:0 20px}.section{padding:80px 0}.pillar-body{padding:26px 22px}.plan{padding:28px 22px}.nav .btn-line{padding:0 12px;font-size:11px;letter-spacing:.08em}.logo-word{font-size:19px}.signal-card{left:16px;right:16px;bottom:16px;min-width:0}}
+
+/* Nav : lien connexion */
+.nav-cta{display:flex;align-items:center;gap:22px}
+.nav-login{font-weight:500;color:var(--ink);text-decoration:none;font-size:15px}
+.nav-login:hover{color:var(--accent)}
+@media (max-width:720px){.nav-cta{gap:12px}.nav-cta .btn{padding:9px 12px;font-size:13px}}
