@@ -6,56 +6,42 @@
 <title>NeoMandat — Détectez les vendeurs grâce aux DPE F et G | Prospection immobilière automatisée</title>
 <meta name="description" content="NeoMandat repère chaque jour les nouveaux DPE F et G de votre secteur, envoie un courrier à votre nom au propriétaire et transforme sa demande d'estimation en mandat. Secteur exclusif, sans engagement.">
 <link rel="canonical" href="https://neomandat.fr/">
-<meta name="theme-color" content="#10141A">
+<meta name="theme-color" content="#0B0E12">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="NeoMandat">
-<meta property="og:title" content="NeoMandat — Vos prochains mandats viennent de recevoir leur DPE">
+<meta property="og:title" content="NeoMandat — Les vendeurs de demain ont déjà reçu leur DPE">
 <meta property="og:description" content="Radar DPE + courrier postal automatique + estimation en ligne : la prospection vendeurs des agents immobiliers, en pilote automatique.">
 <meta property="og:url" content="https://neomandat.fr/">
 <meta property="og:image" content="https://neomandat.fr/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1620718024338-112b5a0764e7?w=2000&q=70&auto=format&fit=crop">
 <link rel="stylesheet" href="/style.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://neomandat.fr/#org",
-      "name": "NeoMandat",
-      "url": "https://neomandat.fr/",
-      "logo": "https://neomandat.fr/favicon.svg",
-      "email": "julie@neomandat.fr",
-      "areaServed": "FR"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "name": "NeoMandat",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web",
-      "description": "Détection des nouveaux DPE F et G, courrier postal automatique aux propriétaires et page d'estimation pour agents immobiliers.",
-      "publisher": {"@id": "https://neomandat.fr/#org"},
-      "offers": [
-        {"@type": "Offer", "name": "Solo", "price": "149", "priceCurrency": "EUR", "description": "1 secteur exclusif, 40 courriers par mois"},
-        {"@type": "Offer", "name": "Agence", "price": "299", "priceCurrency": "EUR", "description": "3 secteurs exclusifs, 120 courriers par mois, Valeur Maison"},
-        {"@type": "Offer", "name": "Réseau", "price": "590", "priceCurrency": "EUR", "description": "10 secteurs exclusifs, 350 courriers par mois"}
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {"@type": "Question", "name": "D'où viennent les données ?", "acceptedAnswer": {"@type": "Answer", "text": "Les DPE proviennent de la base publique de l'ADEME. Les estimations Valeur Maison s'appuient sur les transactions publiées dans DVF (Demandes de valeurs foncières)."}},
-        {"@type": "Question", "name": "Le courrier est-il conforme au RGPD ?", "acceptedAnswer": {"@type": "Answer", "text": "Le courrier est adressé au propriétaire de l'adresse du logement, sans nom. Chaque envoi comporte une mention d'opposition et les adresses opposées sont exclues définitivement."}},
-        {"@type": "Question", "name": "Que veut dire secteur exclusif ?", "acceptedAnswer": {"@type": "Answer", "text": "Tant que votre abonnement est actif, aucune autre agence ne reçoit les signaux de vos codes postaux."}},
-        {"@type": "Question", "name": "Puis-je relire les courriers avant envoi ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Envoi automatique ou validation manuelle, signal par signal. Le modèle de lettre est personnalisable."}},
-        {"@type": "Question", "name": "Y a-t-il un engagement ?", "acceptedAnswer": {"@type": "Answer", "text": "Aucun. L'abonnement mensuel se résilie à tout moment ; l'annuel offre deux mois."}}
-      ]
-    }
+    {"@type": "Organization", "@id": "https://neomandat.fr/#org", "name": "NeoMandat", "url": "https://neomandat.fr/", "logo": "https://neomandat.fr/favicon.svg", "email": "julie@neomandat.fr", "areaServed": "FR"},
+    {"@type": "SoftwareApplication", "name": "NeoMandat", "applicationCategory": "BusinessApplication", "operatingSystem": "Web",
+     "description": "Détection des nouveaux DPE F et G, courrier postal automatique aux propriétaires et page d'estimation pour agents immobiliers.",
+     "publisher": {"@id": "https://neomandat.fr/#org"},
+     "offers": [
+       {"@type": "Offer", "name": "Solo", "price": "149", "priceCurrency": "EUR", "description": "1 secteur exclusif, 40 courriers par mois"},
+       {"@type": "Offer", "name": "Agence", "price": "299", "priceCurrency": "EUR", "description": "3 secteurs exclusifs, 120 courriers par mois, Valeur Maison"},
+       {"@type": "Offer", "name": "Réseau", "price": "590", "priceCurrency": "EUR", "description": "10 secteurs exclusifs, 350 courriers par mois"}
+     ]},
+    {"@type": "FAQPage", "mainEntity": [
+      {"@type": "Question", "name": "D'où viennent les données ?", "acceptedAnswer": {"@type": "Answer", "text": "Les DPE proviennent de la base publique de l'ADEME. Les estimations Valeur Maison s'appuient sur les transactions publiées dans DVF (Demandes de valeurs foncières)."}},
+      {"@type": "Question", "name": "Le courrier est-il conforme au RGPD ?", "acceptedAnswer": {"@type": "Answer", "text": "Le courrier est adressé au propriétaire de l'adresse du logement, sans nom. Chaque envoi comporte une mention d'opposition et les adresses opposées sont exclues définitivement."}},
+      {"@type": "Question", "name": "Que veut dire secteur exclusif ?", "acceptedAnswer": {"@type": "Answer", "text": "Tant que votre abonnement est actif, aucune autre agence ne reçoit les signaux de vos codes postaux."}},
+      {"@type": "Question", "name": "Puis-je relire les courriers avant envoi ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Envoi automatique ou validation manuelle, signal par signal. Le modèle de lettre est personnalisable."}},
+      {"@type": "Question", "name": "Y a-t-il un engagement ?", "acceptedAnswer": {"@type": "Answer", "text": "Aucun. L'abonnement mensuel se résilie à tout moment ; l'annuel offre deux mois."}}
+    ]}
   ]
 }
 </script>
@@ -63,117 +49,143 @@
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
 
-<header class="nav-wrap">
+<header class="nav-wrap overlay" id="nav">
   <nav class="nav container" aria-label="Navigation principale">
     <a href="/" class="logo" aria-label="NeoMandat, accueil">
-      <span class="logo-bars" aria-hidden="true"><i style="height:10px;background:#009C6D"></i><i style="height:14px;background:#A5CC74"></i><i style="height:18px;background:#F0B40F"></i><i style="height:24px;background:var(--accent)"></i></span>
-      <span class="logo-word">neomandat</span>
+      <span class="logo-bars" aria-hidden="true"><i style="height:9px;background:#009C6D"></i><i style="height:13px;background:#A5CC74"></i><i style="height:17px;background:#F0B40F"></i><i style="height:22px;background:#D7221F"></i></span>
+      <span class="logo-word">NEOMANDAT</span>
     </a>
     <div class="nav-links">
-      <a href="#fonctionnement">Fonctionnement</a>
       <a href="#produit">Produit</a>
+      <a href="#fonctionnement">Processus</a>
       <a href="#tarifs">Tarifs</a>
       <a href="#faq">FAQ</a>
     </div>
-    <a href="#reserver" class="btn btn-accent">Réserver mon secteur</a>
+    <a href="#reserver" class="btn btn-line">Réserver mon secteur</a>
   </nav>
 </header>
 
 <main id="contenu">
 
-<section class="hero container">
-  <div class="hero-text">
-    <span class="pill"><b class="tag-g">G</b>Interdits à la location depuis le 1er janvier 2025</span>
-    <h1>Vos prochains mandats viennent de recevoir leur DPE.</h1>
-    <p class="lead">NeoMandat repère chaque jour les nouveaux DPE F et G publiés sur votre secteur, envoie un courrier à votre nom au propriétaire et transforme sa curiosité en demande d'estimation dans votre tableau de bord.</p>
+<!-- HERO -->
+<section class="hero" aria-labelledby="h1">
+  <img class="hero-img" src="https://images.unsplash.com/photo-1620718024338-112b5a0764e7?w=2000&q=70&auto=format&fit=crop" alt="Maison en briques au soleil couchant" fetchpriority="high">
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <p class="mono kicker">Radar DPE · Courrier postal · Estimation en ligne</p>
+    <h1 id="h1">Les vendeurs de demain ont déjà reçu leur DPE.</h1>
+    <p class="hero-lead">Chaque matin, NeoMandat repère les nouveaux DPE F et G de votre secteur, écrit au propriétaire à votre nom et vous livre ses demandes d'estimation.</p>
     <form class="cp-form" id="reserver" onsubmit="return reserver(event)">
       <label for="cp" class="sr-only">Code postal de votre agence</label>
       <input id="cp" name="cp" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="Code postal de votre agence" required>
-      <button type="submit" class="btn btn-dark">Réserver ce secteur</button>
+      <button type="submit" class="btn btn-solid">Réserver ce secteur</button>
     </form>
-    <p class="form-note" id="cp-msg" role="status">Nous vous recontactons sous 24 h pour confirmer la disponibilité.</p>
-    <ul class="checks">
-      <li>Sans engagement</li><li>Secteur exclusif</li><li>Courriers postés pour vous</li>
-    </ul>
+    <p class="mono form-note" id="cp-msg" role="status">Un secteur = une agence · Confirmation sous 24 h</p>
   </div>
+  <div class="container hero-meta mono" aria-hidden="true">
+    <span>Source : base DPE ADEME</span><span>Mise à jour quotidienne</span>
+  </div>
+</section>
 
-  <div class="hero-visual" aria-hidden="true">
-    <div class="card signal">
-      <div class="row-between"><span class="eyebrow">Nouveau signal</span><span class="muted">il y a 2 h</span></div>
-      <div class="signal-body">
-        <div class="dpe-scale">
-          <i style="width:44%;background:#009C6D"></i><i style="width:52%;background:#52B153"></i><i style="width:60%;background:#A5CC74"></i><i style="width:68%;background:#F4E70F"></i><i style="width:76%;background:#F0B40F"></i><i style="width:84%;background:#EB8235"></i><i class="g">G · 468 kWh</i>
+<!-- TICKER -->
+<div class="ticker" aria-label="Exemples de signaux">
+  <span class="ticker-tag mono">Signaux · exemples</span>
+  <div class="ticker-track" aria-hidden="true">
+    <div class="ticker-row mono">
+      <span><b class="g">G</b>Maison 94 m² · 62510 Arques · 1962</span>
+      <span><b class="f">F</b>Maison 118 m² · 62219 Longuenesse · 1975</span>
+      <span><b class="g">G</b>Appartement 41 m² · 62500 Saint-Omer · 1930</span>
+      <span><b class="f">F</b>Maison 86 m² · 62510 Arques · 1958</span>
+      <span><b class="e">E</b>Appartement 63 m² · 62500 Saint-Omer · 1968</span>
+      <span><b class="g">G</b>Maison 72 m² · 62500 Saint-Omer · 1910</span>
+      <span><b class="f">F</b>Maison 104 m² · 62219 Longuenesse · 1971</span>
+    </div>
+    <div class="ticker-row mono">
+      <span><b class="g">G</b>Maison 94 m² · 62510 Arques · 1962</span>
+      <span><b class="f">F</b>Maison 118 m² · 62219 Longuenesse · 1975</span>
+      <span><b class="g">G</b>Appartement 41 m² · 62500 Saint-Omer · 1930</span>
+      <span><b class="f">F</b>Maison 86 m² · 62510 Arques · 1958</span>
+      <span><b class="e">E</b>Appartement 63 m² · 62500 Saint-Omer · 1968</span>
+      <span><b class="g">G</b>Maison 72 m² · 62500 Saint-Omer · 1910</span>
+      <span><b class="f">F</b>Maison 104 m² · 62219 Longuenesse · 1971</span>
+    </div>
+  </div>
+</div>
+
+<!-- LOI -->
+<section class="dark section" aria-labelledby="loi">
+  <div class="container">
+    <p class="mono kicker">Loi Climat et Résilience</p>
+    <div class="split">
+      <h2 id="loi">Un flux continu de vendeurs. Personne ne les appelle encore.</h2>
+      <p class="lead-dim">Un bailleur dont le logement sort du marché locatif a trois options : rénover, laisser vacant ou vendre. Soyez la première agence à lui écrire.</p>
+    </div>
+    <div class="years">
+      <div class="year"><span class="lbl" style="background:#D7221F">G</span><span class="num">2025</span><p>Interdits à la location : nouveaux baux et renouvellements.</p></div>
+      <div class="year"><span class="lbl" style="background:#EB8235">F</span><span class="num">2028</span><p>Les logements F suivent. Les propriétaires arbitrent dès maintenant.</p></div>
+      <div class="year"><span class="lbl" style="background:#F0B40F">E</span><span class="num">2034</span><p>Puis les E. Le gisement de vendeurs ne fait que grossir.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PILIERS -->
+<section id="produit" class="section" aria-labelledby="produit-t">
+  <div class="container">
+    <p class="mono kicker kicker-dark">Deux moteurs</p>
+    <h2 id="produit-t" class="h2-dark">Détecter le vendeur. Puis le faire venir à vous.</h2>
+    <div class="pillars">
+      <article class="pillar">
+        <img src="https://images.unsplash.com/photo-1609604967645-008302195de4?w=1200&q=70&auto=format&fit=crop" alt="Maison de maître en briques" loading="lazy">
+        <div class="pillar-body">
+          <p class="mono pill-tag"><b class="g">G</b>Radar DPE</p>
+          <h3>Chaque nouveau DPE F ou G de vos rues, chaque matin.</h3>
+          <p>Le radar interroge la base officielle de l'ADEME, isole les passoires thermiques de vos secteurs et prépare un courrier sobre, signé de votre agence, posté pour vous.</p>
+          <ul class="ticks"><li>Filtres étiquette, surface, type de bien</li><li>Courrier imprimé, mis sous pli, affranchi</li><li>QR code unique pour mesurer chaque retour</li></ul>
         </div>
-        <div>
-          <p class="signal-title">Maison · 94 m²</p>
-          <p class="muted-2">Rue des Tilleuls, 62510 Arques</p>
-          <p class="muted small">DPE du 07/11/2026 · Chauffage fioul · 1962</p>
+      </article>
+      <article class="pillar">
+        <img src="https://images.unsplash.com/photo-1744782351841-9cc6b86a5add?w=1200&q=70&auto=format&fit=crop" alt="Main tenant des clés de maison" loading="lazy">
+        <div class="pillar-body">
+          <p class="mono pill-tag"><b class="b">€</b>Valeur Maison</p>
+          <h3>Le propriétaire scanne. Vous recevez un vendeur.</h3>
+          <p>Le QR code ouvre votre page d'estimation, à vos couleurs. Le propriétaire voit une fourchette tirée des ventes réelles du quartier, puis vous laisse ses coordonnées pour l'estimation détaillée.</p>
+          <ul class="ticks"><li>Fourchette fondée sur les ventes DVF</li><li>Page à votre logo, intégrable à votre site</li><li>Alerte immédiate à chaque demande</li></ul>
         </div>
-      </div>
-    </div>
-    <div class="mini-row">
-      <div class="card mini"><span class="ico ico-blue"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2742D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><b>Courrier posté</b><br><small>À votre en-tête, J+1</small></span></div>
-      <div class="card mini dark"><span class="ico ico-dark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9FB0FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span><span><b>Estimation demandée</b><br><small>Lead vendeur qualifié</small></span></div>
-    </div>
-    <p class="demo-note">Exemple illustratif</p>
-  </div>
-</section>
-
-<section class="band" aria-labelledby="calendrier">
-  <div class="container band-inner">
-    <div class="row-between wrap gap-24 align-end">
-      <h2 id="calendrier">La loi Climat et Résilience crée un flux continu de vendeurs. Personne ne les appelle encore.</h2>
-      <p class="band-lead">Un bailleur dont le logement sort du marché locatif a trois options : rénover, laisser vacant ou vendre. Soyez la première agence à lui écrire.</p>
-    </div>
-    <div class="grid-3">
-      <div class="band-card"><div class="year"><span class="lbl" style="background:#D7221F">G</span>2025</div><p>Logements G interdits à la mise en location (nouveaux baux et renouvellements).</p></div>
-      <div class="band-card"><div class="year"><span class="lbl" style="background:#EB8235;color:#10141A">F</span>2028</div><p>Les logements F suivent. Les propriétaires arbitrent dès maintenant.</p></div>
-      <div class="band-card"><div class="year"><span class="lbl" style="background:#F0B40F;color:#10141A">E</span>2034</div><p>Puis les E. Le gisement de vendeurs ne fait que grossir.</p></div>
+      </article>
     </div>
   </div>
 </section>
 
-<section id="produit" class="container section" aria-labelledby="produit-t">
-  <div class="section-head">
-    <span class="kicker">Deux moteurs, un seul objectif</span>
-    <h2 id="produit-t">Détecter le vendeur. Puis le faire venir à vous.</h2>
-  </div>
-  <div class="two-col">
-    <article class="feature">
-      <span class="ico-lg" style="background:#FDEDEC"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#B51C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span>
-      <h3>Radar DPE</h3>
-      <p>Chaque matin, le radar interroge la base officielle des DPE de l'ADEME et isole les logements F et G de vos secteurs. Un courrier sobre, signé de votre agence, part par voie postale.</p>
-      <ul class="ticks"><li>Scan quotidien, filtré par étiquette, surface et type de bien</li><li>Courrier imprimé, mis sous pli et posté pour vous</li><li>QR code unique par courrier pour mesurer chaque retour</li></ul>
-    </article>
-    <article class="feature">
-      <span class="ico-lg" style="background:#EEF1FD"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2742D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M9 15h6"/></svg></span>
-      <h3>Valeur Maison</h3>
-      <p>Le QR code mène à votre page d'estimation, à vos couleurs. Le propriétaire obtient une fourchette de prix fondée sur les ventes réelles du quartier ; vous recevez ses coordonnées et son projet.</p>
-      <ul class="ticks"><li>Estimation basée sur les transactions DVF</li><li>Page à votre logo, intégrable sur votre site</li><li>Alerte instantanée à chaque demande</li></ul>
-    </article>
+<!-- PROCESS -->
+<section id="fonctionnement" class="section section-tight" aria-labelledby="fonct-t">
+  <div class="container">
+    <p class="mono kicker kicker-dark">Processus</p>
+    <h2 id="fonct-t" class="h2-dark">Vous choisissez vos rues. NeoMandat prospecte.</h2>
+    <ol class="steps">
+      <li><span class="mono">01</span><h3>Réservez vos secteurs</h3><p>Un code postal, une agence. Une fois pris, votre secteur n'est plus proposé à la concurrence.</p></li>
+      <li><span class="mono">02</span><h3>Le radar détecte</h3><p>Les nouveaux DPE F et G arrivent dans votre tableau de bord, classés par potentiel.</p></li>
+      <li><span class="mono">03</span><h3>Le courrier part</h3><p>Automatiquement ou après validation, à votre en-tête, avec votre signature.</p></li>
+      <li><span class="mono">04</span><h3>Le vendeur vous appelle</h3><p>Il estime son bien sur Valeur Maison. Vous recevez le lead, prêt pour le rendez-vous.</p></li>
+    </ol>
   </div>
 </section>
 
-<section id="fonctionnement" class="container section" aria-labelledby="fonct-t">
-  <div class="section-head">
-    <span class="kicker">Fonctionnement</span>
-    <h2 id="fonct-t">Vous choisissez vos rues. NeoMandat fait la prospection.</h2>
-  </div>
-  <ol class="steps">
-    <li><span>01</span><h3>Réservez vos secteurs</h3><p>Un code postal, une agence. Une fois votre secteur pris, il n'est plus proposé à la concurrence.</p></li>
-    <li><span>02</span><h3>Le radar détecte</h3><p>Les nouveaux DPE F et G apparaissent dans votre tableau de bord, classés par potentiel.</p></li>
-    <li><span>03</span><h3>Le courrier part</h3><p>Automatiquement ou après votre validation, à votre en-tête, avec votre signature.</p></li>
-    <li class="last"><span>04</span><h3>Le vendeur vous appelle</h3><p>Il estime son bien sur Valeur Maison. Vous recevez le lead, prêt pour le rendez-vous.</p></li>
-  </ol>
+<!-- PHOTO STRIP -->
+<section class="strip" aria-label="Rues de France">
+  <figure><img src="https://images.unsplash.com/photo-1699609914562-9f4aeffca787?w=900&q=65&auto=format&fit=crop" alt="Rue bordée de maisons de ville" loading="lazy"></figure>
+  <figure><img src="https://images.unsplash.com/photo-1629889639614-156fec963c88?w=900&q=65&auto=format&fit=crop" alt="Maisons à colombages dans une rue" loading="lazy"></figure>
+  <figure><img src="https://images.unsplash.com/photo-1654863693875-e9e5a14b619e?w=900&q=65&auto=format&fit=crop" alt="Maisons de ville en brique" loading="lazy"></figure>
+  <p class="strip-caption">Chaque rue de votre secteur,<br>scannée chaque matin.</p>
 </section>
 
-<section id="tarifs" class="pricing" aria-labelledby="tarifs-t">
-  <div class="container section">
-    <div class="row-between wrap gap-24 align-end">
-      <div class="section-head">
-        <span class="kicker">Tarifs</span>
-        <h2 id="tarifs-t">Un mandat signé rembourse des mois d'abonnement.</h2>
-        <p class="lead">Courriers, impression et affranchissement inclus. Prix HT, sans engagement.</p>
+<!-- TARIFS -->
+<section id="tarifs" class="section pricing" aria-labelledby="tarifs-t">
+  <div class="container">
+    <div class="split align-end">
+      <div>
+        <p class="mono kicker kicker-dark">Tarifs</p>
+        <h2 id="tarifs-t" class="h2-dark">Un mandat signé rembourse des mois d'abonnement.</h2>
+        <p class="lead-ink">Courriers inclus : impression, mise sous pli et affranchissement. Sans engagement.</p>
       </div>
       <div class="toggle" role="group" aria-label="Période de facturation">
         <button type="button" id="b-m" aria-pressed="true" onclick="setPeriod(false)">Mensuel</button>
@@ -182,85 +194,89 @@
     </div>
     <div class="plans">
       <article class="plan">
-        <h3>Solo</h3>
+        <p class="mono plan-name">Solo</p>
         <p class="plan-desc">Pour l'agent indépendant ou le mandataire qui veut son propre flux de vendeurs.</p>
         <p class="price"><span data-m="149" data-y="1490">149 €</span><small>HT / mois</small></p>
-        <p class="billed" hidden>Facturé 1 490 € HT par an</p>
-        <a class="btn btn-outline" href="mailto:julie@neomandat.fr?subject=NeoMandat%20%E2%80%94%20Formule%20Solo">Démarrer avec Solo</a>
-        <ul class="ticks"><li>1 secteur exclusif (1 code postal)</li><li>Radar DPE F et G quotidien</li><li>40 courriers postés / mois</li><li>Dashboard et alertes e-mail</li></ul>
+        <p class="billed mono" hidden>Facturé 1 490 € HT / an</p>
+        <a class="btn btn-ink-line" href="mailto:julie@neomandat.fr?subject=NeoMandat%20%E2%80%94%20Formule%20Solo">Démarrer avec Solo</a>
+        <ul class="ticks ticks-ink"><li>1 secteur exclusif (1 code postal)</li><li>Radar DPE F et G quotidien</li><li>40 courriers postés / mois</li><li>Dashboard et alertes e-mail</li></ul>
       </article>
       <article class="plan featured">
-        <span class="badge">LE PLUS CHOISI</span>
-        <h3>Agence</h3>
+        <span class="badge mono">Le plus choisi</span>
+        <p class="mono plan-name">Agence</p>
         <p class="plan-desc">Pour l'agence qui veut verrouiller son territoire et convertir avec Valeur Maison.</p>
         <p class="price"><span data-m="299" data-y="2990">299 €</span><small>HT / mois</small></p>
-        <p class="billed" hidden>Facturé 2 990 € HT par an</p>
-        <a class="btn btn-accent" href="mailto:julie@neomandat.fr?subject=NeoMandat%20%E2%80%94%20Formule%20Agence">Réserver mes secteurs</a>
+        <p class="billed mono" hidden>Facturé 2 990 € HT / an</p>
+        <a class="btn btn-solid" href="mailto:julie@neomandat.fr?subject=NeoMandat%20%E2%80%94%20Formule%20Agence">Réserver mes secteurs</a>
         <ul class="ticks"><li>3 secteurs exclusifs</li><li>Radar DPE F, G et E en option</li><li>120 courriers postés / mois</li><li>Valeur Maison à vos couleurs</li><li>Suivi QR code et 3 utilisateurs</li></ul>
       </article>
       <article class="plan">
-        <h3>Réseau</h3>
+        <p class="mono plan-name">Réseau</p>
         <p class="plan-desc">Pour les groupes multi-agences et les réseaux de mandataires.</p>
         <p class="price"><span data-m="590" data-y="5900">590 €</span><small>HT / mois</small></p>
-        <p class="billed" hidden>Facturé 5 900 € HT par an</p>
-        <a class="btn btn-outline" href="mailto:julie@neomandat.fr?subject=NeoMandat%20%E2%80%94%20Formule%20R%C3%A9seau">Parler à l'équipe</a>
-        <ul class="ticks"><li>10 secteurs exclusifs</li><li>350 courriers postés / mois</li><li>Répartition des leads par agence</li><li>Utilisateurs illimités, export CRM</li></ul>
+        <p class="billed mono" hidden>Facturé 5 900 € HT / an</p>
+        <a class="btn btn-ink-line" href="mailto:julie@neomandat.fr?subject=NeoMandat%20%E2%80%94%20Formule%20R%C3%A9seau">Parler à l'équipe</a>
+        <ul class="ticks ticks-ink"><li>10 secteurs exclusifs</li><li>350 courriers postés / mois</li><li>Répartition des leads par agence</li><li>Utilisateurs illimités, export CRM</li></ul>
       </article>
     </div>
-    <p class="center muted-2">Courrier supplémentaire : 1,90 € HT · Secteur additionnel : 79 € HT / mois · Résiliable à tout moment</p>
+    <p class="extras mono">Courrier supplémentaire : 2,50 € HT · Secteur additionnel : 79 € HT / mois · Résiliable à tout moment</p>
   </div>
 </section>
 
-<section id="faq" class="container narrow section" aria-labelledby="faq-t">
-  <h2 id="faq-t" class="center">Questions fréquentes</h2>
-  <div class="faq">
-    <details><summary>D'où viennent les données ?</summary><p>Les DPE proviennent de la base publique de l'ADEME, mise à jour en continu. Les estimations Valeur Maison s'appuient sur les transactions publiées dans DVF (Demandes de valeurs foncières).</p></details>
-    <details><summary>Le courrier est-il conforme au RGPD ?</summary><p>Le courrier est adressé « au propriétaire » de l'adresse du logement, sans nom. Chaque envoi comporte une mention d'opposition, et les adresses opposées sont exclues définitivement.</p></details>
-    <details><summary>Que veut dire « secteur exclusif » ?</summary><p>Tant que votre abonnement est actif, aucune autre agence ne reçoit les signaux de vos codes postaux. Premier arrivé, premier servi.</p></details>
-    <details><summary>Puis-je relire les courriers avant envoi ?</summary><p>Oui. Choisissez l'envoi automatique ou la validation manuelle, signal par signal, depuis le dashboard. Le modèle de lettre est personnalisable.</p></details>
-    <details><summary>Y a-t-il un engagement ?</summary><p>Aucun. L'abonnement mensuel se résilie à tout moment. L'annuel vous fait économiser deux mois.</p></details>
-  </div>
-</section>
-
-<section class="container section-bottom">
-  <div class="cta">
-    <div>
-      <h2>Votre secteur est peut-être encore libre.</h2>
-      <p>Réservez-le avant la concurrence. Premiers signaux dans votre dashboard dès l'activation.</p>
+<!-- FAQ -->
+<section id="faq" class="section" aria-labelledby="faq-t">
+  <div class="container narrow">
+    <p class="mono kicker kicker-dark">FAQ</p>
+    <h2 id="faq-t" class="h2-dark">Questions fréquentes</h2>
+    <div class="faq">
+      <details><summary>D'où viennent les données ?</summary><p>Les DPE proviennent de la base publique de l'ADEME, mise à jour en continu. Les estimations Valeur Maison s'appuient sur les transactions publiées dans DVF (Demandes de valeurs foncières).</p></details>
+      <details><summary>Le courrier est-il conforme au RGPD ?</summary><p>Le courrier est adressé « au propriétaire » de l'adresse du logement, sans nom. Chaque envoi comporte une mention d'opposition, et les adresses opposées sont exclues définitivement.</p></details>
+      <details><summary>Que veut dire « secteur exclusif » ?</summary><p>Tant que votre abonnement est actif, aucune autre agence ne reçoit les signaux de vos codes postaux. Premier arrivé, premier servi.</p></details>
+      <details><summary>Puis-je relire les courriers avant envoi ?</summary><p>Oui. Choisissez l'envoi automatique ou la validation manuelle, signal par signal, depuis le dashboard. Le modèle de lettre est personnalisable.</p></details>
+      <details><summary>Y a-t-il un engagement ?</summary><p>Aucun. L'abonnement mensuel se résilie à tout moment. L'annuel vous fait économiser deux mois.</p></details>
     </div>
-    <a href="#reserver" class="btn btn-white">Vérifier mon code postal →</a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" aria-labelledby="cta-t">
+  <img src="https://images.unsplash.com/photo-1721149122657-7b5440f39160?w=2000&q=65&auto=format&fit=crop" alt="" loading="lazy">
+  <div class="cta-shade" aria-hidden="true"></div>
+  <div class="container cta-inner">
+    <p class="mono kicker">Exclusivité par code postal</p>
+    <h2 id="cta-t">Votre secteur est peut-être encore libre.</h2>
+    <a href="#reserver" class="btn btn-solid">Vérifier mon code postal</a>
   </div>
 </section>
 
 </main>
 
 <footer class="footer">
-  <div class="container row-between wrap gap-16">
-    <span class="logo-word">neomandat</span>
-    <nav aria-label="Liens légaux" class="foot-links">
+  <div class="container foot">
+    <span class="logo-word">NEOMANDAT</span>
+    <nav aria-label="Liens légaux" class="foot-links mono">
       <a href="#tarifs">Tarifs</a><a href="#faq">FAQ</a><a href="/mentions-legales.html">Mentions légales</a><a href="/confidentialite.html">Confidentialité</a><a href="mailto:julie@neomandat.fr">Contact</a>
     </nav>
-    <span>© 2026 NeoMandat</span>
+    <span class="mono">© 2026 NeoMandat</span>
   </div>
+  <p class="container credits mono">Photos : <a href="https://unsplash.com/">Unsplash</a>. Signaux affichés à titre d'exemple.</p>
 </footer>
 
 <script>
+var nav=document.getElementById('nav');
+addEventListener('scroll',function(){nav.classList.toggle('solid',scrollY>40)},{passive:true});
 function setPeriod(annual){
   document.getElementById('b-m').setAttribute('aria-pressed', String(!annual));
   document.getElementById('b-a').setAttribute('aria-pressed', String(annual));
-  document.querySelectorAll('.price span').forEach(function(s){
-    var v = annual ? Math.round(+s.dataset.y/12) : +s.dataset.m;
-    s.textContent = v + ' €';
-  });
-  document.querySelectorAll('.billed').forEach(function(b){ b.hidden = !annual; });
+  document.querySelectorAll('.price span').forEach(function(s){ s.textContent=(annual?Math.round(+s.dataset.y/12):+s.dataset.m)+' €'; });
+  document.querySelectorAll('.billed').forEach(function(b){ b.hidden=!annual; });
 }
 function reserver(e){
   e.preventDefault();
-  var cp = document.getElementById('cp').value.replace(/\D/g,'');
-  var msg = document.getElementById('cp-msg');
-  if (cp.length !== 5){ msg.textContent = 'Saisissez un code postal à 5 chiffres.'; return false; }
-  msg.textContent = 'Votre messagerie s’ouvre pour réserver le secteur ' + cp + '. Nous confirmons la disponibilité sous 24 h.';
-  window.location.href = 'mailto:julie@neomandat.fr?subject=' + encodeURIComponent('Réservation du secteur ' + cp) + '&body=' + encodeURIComponent('Bonjour,\n\nJe souhaite réserver le secteur ' + cp + ' sur NeoMandat.\n\nAgence :\nTéléphone :\n');
+  var cp=document.getElementById('cp').value.replace(/\D/g,''), msg=document.getElementById('cp-msg');
+  if(cp.length!==5){ msg.textContent='Saisissez un code postal à 5 chiffres.'; return false; }
+  msg.textContent='Votre messagerie s’ouvre pour réserver le secteur '+cp+'.';
+  location.href='mailto:julie@neomandat.fr?subject='+encodeURIComponent('Réservation du secteur '+cp)+'&body='+encodeURIComponent('Bonjour,\n\nJe souhaite réserver le secteur '+cp+' sur NeoMandat.\n\nAgence :\nTéléphone :\n');
   return false;
 }
 </script>
