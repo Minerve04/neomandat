@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Estimation offerte de votre logement — NeoMandat</title>
-<meta name="description" content="Demandez l'estimation gratuite de votre logement par un conseiller immobilier de votre secteur.">
+<title>Valeur Maison · estimation offerte de votre logement</title>
+<meta name="description" content="Fourchette de prix fondée sur les ventes réelles de votre commune, puis estimation offerte par un conseiller immobilier de votre secteur.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#0B0E12">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -12,58 +12,74 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-:root{--ink:#0B0E12;--paper:#F4F1EA;--gold:#F0B40F;--g:#D7221F;--muted:#5D6470;--line:#DDD7CA}
+:root{--ink:#0B0E12;--paper:#F4F1EA;--gold:#F0B40F;--g:#D7221F;--muted:#5D6470;--line:#DDD7CA;--accent:#0B0E12}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Barlow,system-ui,sans-serif;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 .top{background:var(--ink);color:#fff}
-.top .in{max-width:760px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;gap:10px}
+.top .in{max-width:760px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:10px;min-height:60px}
 .bars{display:flex;align-items:flex-end;gap:3px}.bars i{width:6px;display:block;border-radius:1px}
 .word{font-family:"Barlow Condensed",sans-serif;font-weight:800;letter-spacing:.08em;font-size:20px}
-main{max-width:760px;margin:0 auto;padding:36px 20px 56px}
+.top.agent{background:#fff;color:var(--ink);border-bottom:3px solid var(--accent)}
+.top img{max-height:40px;max-width:200px;display:block}
+.top .who{margin-left:auto;text-align:right;font-size:14px;line-height:1.3}
+.top .who b{display:block;font-size:15px}
+main{max-width:760px;margin:0 auto;padding:34px 20px 56px}
 .kicker{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 h1{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:clamp(34px,7vw,52px);line-height:1;text-transform:uppercase;margin:10px 0 14px}
-.lead{font-size:19px;color:#2A2F37;max-width:600px}
-.card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:22px;margin-top:26px}
+h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:24px;text-transform:uppercase;margin-bottom:12px}
+.lead{font-size:19px;color:#2A2F37;max-width:620px}
+.card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:22px;margin-top:22px}
 .prop{display:flex;gap:18px;align-items:center}
 .lab{flex:none;width:64px;height:64px;border-radius:6px;display:grid;place-items:center;font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:40px;color:#fff;background:var(--muted)}
 .prop b{display:block;font-size:19px}
 .prop small{color:var(--muted);font-size:15px}
-.points{list-style:none;margin-top:18px;display:grid;gap:8px}
+.points{list-style:none;margin-top:16px;display:grid;gap:8px}
 .points li{padding-left:22px;position:relative}
 .points li:before{content:"";position:absolute;left:0;top:10px;width:10px;height:3px;background:var(--gold)}
-form{display:grid;gap:14px;margin-top:6px}
+.range{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:clamp(34px,8vw,48px);line-height:1.05;color:var(--accent)}
+.range small{font-size:.5em;color:var(--muted);font-weight:600}
+.bar{height:10px;border-radius:5px;background:linear-gradient(90deg,#E7E2D6,var(--accent),#E7E2D6);margin:14px 0 8px;opacity:.85}
+.meta{font-size:14px;color:var(--muted)}
+.note{font-size:14px;color:#2A2F37;margin-top:12px;padding:10px 12px;background:#FBF7EC;border-left:3px solid var(--gold)}
+form{display:grid;gap:14px}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-@media(max-width:560px){.row{grid-template-columns:1fr}.prop{align-items:flex-start}}
+.row3{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px}
+@media(max-width:560px){.row,.row3{grid-template-columns:1fr}.prop{align-items:flex-start}.top .who{display:none}}
 label{font-weight:600;font-size:15px;display:grid;gap:6px}
 input,select{font:inherit;font-size:16px;padding:12px 13px;border:1px solid #C9C2B3;border-radius:5px;background:#fff;color:var(--ink);width:100%}
 input:focus,select:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--ink)}
 .consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:14px;color:#2A2F37}
 .consent input{width:18px;height:18px;margin-top:3px;flex:none}
-button{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:20px;letter-spacing:.04em;text-transform:uppercase;background:var(--ink);color:#fff;border:0;border-radius:5px;padding:15px 20px;cursor:pointer}
-button:hover{background:#000}button[disabled]{opacity:.6;cursor:wait}
+button{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:20px;letter-spacing:.04em;text-transform:uppercase;background:var(--accent);color:#fff;border:0;border-radius:5px;padding:15px 20px;cursor:pointer}
+button:hover{filter:brightness(.9)}button[disabled]{opacity:.6;cursor:wait}
+button.sec{background:#fff;color:var(--ink);border:1px solid var(--ink);font-size:17px;padding:12px 16px}
 .err{color:var(--g);font-size:14px;min-height:1em}
 .ok{display:none;text-align:center;padding:12px 0}
-.ok h2{font-family:"Barlow Condensed",sans-serif;font-size:32px;text-transform:uppercase;margin-bottom:8px}
-.fine{font-size:13px;color:var(--muted);margin-top:26px}
-.fine a{color:var(--ink)}
-.linkbtn{background:none;border:0;padding:0;font:inherit;font-size:13px;text-decoration:underline;color:var(--ink);cursor:pointer;text-transform:none;letter-spacing:0}
-.linkbtn:hover{background:none}
+.ok h2{font-size:32px;margin-bottom:8px}
+.fine{font-size:13px;color:var(--muted);margin-top:24px}
+.linkbtn{background:none;border:0;padding:0;font:inherit;font-size:13px;text-decoration:underline;color:var(--ink);cursor:pointer;text-transform:none;letter-spacing:0;font-weight:400}
+.linkbtn:hover{filter:none}
+.sugg{border:1px solid var(--line);border-radius:5px;background:#fff;margin-top:-8px;max-height:220px;overflow:auto}
+.sugg div{padding:9px 12px;cursor:pointer;font-size:15px}.sugg div:hover{background:#F4F1EA}
 footer{border-top:1px solid var(--line);max-width:760px;margin:0 auto;padding:18px 20px 30px;font-size:13px;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap}
 footer a{color:var(--muted)}
+.embed .top,.embed footer{display:none}.embed main{padding-top:16px}
+[hidden]{display:none!important}
 </style>
 </head>
 <body>
-<header class="top"><div class="in">
-<span class="bars" aria-hidden="true"><i style="height:9px;background:#009C6D"></i><i style="height:13px;background:#A5CC74"></i><i style="height:17px;background:#F0B40F"></i><i style="height:22px;background:#D7221F"></i></span>
-<span class="word">NEOMANDAT</span>
+<header class="top" id="top"><div class="in">
+  <span id="brand"><span class="bars" aria-hidden="true" style="display:inline-flex"><i style="height:9px;background:#009C6D"></i><i style="height:13px;background:#A5CC74"></i><i style="height:17px;background:#F0B40F"></i><i style="height:22px;background:#D7221F"></i></span> <span class="word">NEOMANDAT</span></span>
+  <div class="who" id="who" hidden></div>
 </div></header>
 
 <main>
-<p class="kicker">Estimation offerte · sans engagement</p>
+<p class="kicker">Valeur Maison · estimation offerte</p>
 <h1>Combien vaut votre logement aujourd'hui&nbsp;?</h1>
-<p class="lead">Votre conseiller immobilier vous rappelle sous 24&nbsp;h ouvrées pour une estimation gratuite, qui tient compte du diagnostic énergétique et des travaux possibles.</p>
+<p class="lead" id="lead">Une première fourchette fondée sur les ventes réellement conclues dans votre commune, puis une estimation précise par un conseiller de votre secteur, offerte et sans engagement.</p>
 
+<!-- Bien connu (QR du courrier) -->
 <div class="card" id="bien" hidden>
   <div class="prop">
     <div class="lab" id="lab">?</div>
@@ -72,7 +88,33 @@ footer a{color:var(--muted)}
   <ul class="points" id="pts"></ul>
 </div>
 
-<div class="card">
+<!-- Bien saisi (page agent) -->
+<div class="card" id="saisie" hidden>
+  <h2>Votre logement</h2>
+  <form id="fs" novalidate autocomplete="off">
+    <label>Adresse<input id="q" placeholder="ex. 12 rue de Dunkerque, Saint-Omer" required></label>
+    <div class="sugg" id="sugg" hidden></div>
+    <div class="row">
+      <label>Type
+        <select id="ty"><option value="maison">Maison</option><option value="appartement">Appartement</option></select>
+      </label>
+      <label>Surface habitable (m²)<input id="su" type="number" min="9" max="1000" inputmode="numeric" placeholder="ex. 95"></label>
+    </div>
+    <p class="err" id="errs"></p>
+    <button type="submit" class="sec">Voir la fourchette de prix</button>
+  </form>
+</div>
+
+<div class="card" id="val" hidden>
+  <h2>Fourchette indicative</h2>
+  <div class="range" id="rg"></div>
+  <div class="bar"></div>
+  <p class="meta" id="rgmeta"></p>
+  <p class="note" id="rgnote" hidden></p>
+</div>
+
+<div class="card" id="cta">
+  <h2 id="ctat">Être rappelé pour une estimation précise</h2>
   <form id="f" novalidate>
     <div class="row">
       <label>Prénom<input name="prenom" autocomplete="given-name" required maxlength="60"></label>
@@ -82,35 +124,28 @@ footer a{color:var(--muted)}
     <div class="row">
       <label>Votre projet
         <select name="projet" required>
-          <option value="">Choisir…</option>
-          <option>Vendre</option>
-          <option>Louer après travaux</option>
-          <option>Connaître la valeur seulement</option>
-          <option>Je ne sais pas encore</option>
+          <option value="">Choisir…</option><option>Vendre</option><option>Louer après travaux</option><option>Connaître la valeur seulement</option><option>Je ne sais pas encore</option>
         </select>
       </label>
       <label>Échéance
         <select name="echeance" required>
-          <option value="">Choisir…</option>
-          <option>Moins de 3 mois</option>
-          <option>3 à 12 mois</option>
-          <option>Plus d'un an</option>
-          <option>Pas d'échéance</option>
+          <option value="">Choisir…</option><option>Moins de 3 mois</option><option>3 à 12 mois</option><option>Plus d'un an</option><option>Pas d'échéance</option>
         </select>
       </label>
     </div>
     <label class="consent"><input type="checkbox" name="consent" required>
-      <span>J'accepte que mes coordonnées soient transmises au conseiller immobilier qui m'a écrit, uniquement pour me recontacter au sujet de cette estimation. <a href="/confidentialite.html">Politique de confidentialité</a>.</span></label>
+      <span id="cons">J'accepte que mes coordonnées soient transmises au conseiller immobilier de mon secteur, uniquement pour me recontacter au sujet de cette estimation. <a href="/confidentialite.html">Politique de confidentialité</a>.</span></label>
     <p class="err" id="err" role="alert"></p>
-    <button type="submit" id="go">Être rappelé pour mon estimation</button>
+    <button type="submit" id="go">Être rappelé</button>
   </form>
   <div class="ok" id="ok" role="status">
     <h2>Demande envoyée</h2>
-    <p>Merci. Votre conseiller vous rappelle sous 24&nbsp;h ouvrées.</p>
+    <p id="okt">Merci. Votre conseiller vous rappelle sous 24&nbsp;h ouvrées.</p>
   </div>
 </div>
 
-<p class="fine" id="opp">Vous ne souhaitez plus recevoir de courrier pour ce logement&nbsp;? <button type="button" class="linkbtn" id="oppbtn">Ne plus recevoir de courrier</button></p>
+<p class="fine" id="opp" hidden>Vous ne souhaitez plus recevoir de courrier pour ce logement&nbsp;? <button type="button" class="linkbtn" id="oppbtn">Ne plus recevoir de courrier</button></p>
+<p class="fine">Fourchette calculée à partir des données publiques DVF (ventes enregistrées par la DGFiP, diffusées par le Cerema) et du DPE publié par l'ADEME. Elle ne remplace pas une estimation sur place.</p>
 </main>
 
 <footer><span>© 2026 NeoMandat</span><a href="/mentions-legales.html">Mentions légales</a><a href="/confidentialite.html">Confidentialité</a><a href="mailto:julie@neomandat.fr">julie@neomandat.fr</a></footer>
@@ -118,61 +153,153 @@ footer a{color:var(--muted)}
 <script>
 (function(){
   var HOOK = "https://hook.eu1.make.com/tcwhcmxs845gfhwlnwf3azn14hl7lp5m";
-  var p = new URLSearchParams(location.search);
-  var d = (p.get("d") || "").replace(/[^0-9A-Za-z]/g, "").slice(0, 20);
+  var $ = function(id){ return document.getElementById(id); };
+  var P = new URLSearchParams(location.search);
+  var d = (P.get("d") || "").replace(/[^0-9A-Za-z]/g, "").slice(0, 20);
+  var a = (P.get("a") || "").replace(/[^0-9A-Za-z]/g, "").slice(0, 20);
+  if (P.get("embed") === "1") document.body.classList.add("embed");
   var COL = {A:"#009C6D",B:"#52B153",C:"#A5CC74",D:"#F4E70F",E:"#F0B40F",F:"#EB8235",G:"#D7221F"};
   var LOI = {
-    G:["Location interdite depuis le 1er janvier 2025 (nouveaux baux et renouvellements).","Vente toujours possible, à un prix qui intègre les travaux.","Une rénovation peut aussi faire gagner plusieurs classes."],
+    G:["Location interdite depuis le 1er janvier 2025 (nouveaux baux et renouvellements).","Vente toujours possible, à un prix qui intègre les travaux.","Une rénovation peut faire gagner plusieurs classes."],
     F:["Location interdite à partir du 1er janvier 2028.","Vente possible dès aujourd'hui, avec un audit énergétique.","Anticiper laisse le temps de comparer vente et travaux."],
     E:["Location interdite à partir du 1er janvier 2034.","Bien encore louable et vendable sans contrainte immédiate.","Une estimation aide à arbitrer travaux ou vente."]
   };
-  function send(o){
-    var b = new URLSearchParams(o); b.set("d", d);
-    return fetch(HOOK, {method:"POST", mode:"no-cors", body:b, keepalive:true});
+  var S = {adresse:"", bien:"", fourchette:"", etq:""};
+
+  function post(o){ var b = new URLSearchParams(o); return fetch(HOOK, {method:"POST", body:b}); }
+  function beacon(o){ var b = new URLSearchParams(o); return fetch(HOOK, {method:"POST", mode:"no-cors", body:b, keepalive:true}); }
+  function eur(n){ return new Intl.NumberFormat("fr-FR",{maximumFractionDigits:0}).format(n) + " €"; }
+  function cap(s){ return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; }
+
+  /* ---------- Habillage agent ---------- */
+  function brand(t){
+    var p = new URLSearchParams(t || "");
+    if (!p.get("nom")) return;
+    if (p.get("a")) a = p.get("a");
+    var col = /^#[0-9a-fA-F]{6}$/.test(p.get("couleur")||"") ? p.get("couleur") : "#0B0E12";
+    document.documentElement.style.setProperty("--accent", col);
+    var top = $("top"); top.classList.add("agent");
+    var logo = p.get("logo") || "";
+    $("brand").innerHTML = "";
+    if (logo.indexOf("data:image") === 0) { var im = new Image(); im.src = logo; im.alt = p.get("agence") || p.get("nom"); $("brand").appendChild(im); }
+    else { var s = document.createElement("span"); s.className = "word"; s.style.color = col; s.textContent = (p.get("agence") || p.get("nom")).toUpperCase(); $("brand").appendChild(s); }
+    var w = $("who"); w.hidden = false; w.innerHTML = "";
+    var b = document.createElement("b"); b.textContent = p.get("nom"); w.appendChild(b);
+    w.appendChild(document.createTextNode((p.get("titre") || "Conseiller immobilier") + (p.get("tel") ? " · " + p.get("tel") : "")));
+    $("ctat").textContent = "Être rappelé par " + p.get("nom").split(" ")[0];
+    $("go").textContent = "Être rappelé par " + p.get("nom").split(" ")[0];
+    $("cons").firstChild.textContent = "J'accepte que mes coordonnées soient transmises à " + p.get("nom") + (p.get("agence") ? " (" + p.get("agence") + ")" : "") + ", uniquement pour me recontacter au sujet de cette estimation. ";
+    $("okt").textContent = "Merci. " + p.get("nom") + " vous rappelle sous 24 h ouvrées" + (p.get("tel") ? " (" + p.get("tel") + ")" : "") + ".";
+    document.title = "Valeur Maison · " + (p.get("agence") || p.get("nom"));
   }
+
+  /* ---------- DVF (Cerema, données DGFiP) ---------- */
+  var cache = {};
+  function dvf(insee, type){
+    var k = insee + type; if (cache[k]) return cache[k];
+    var cod = type === "appartement" ? "121" : "111";
+    var y0 = new Date().getFullYear() - 3;
+    function get(minY){
+      return fetch("https://apidf-preprod.cerema.fr/dvf_opendata/mutations/?code_insee=" + insee + "&codtypbien=" + cod + "&anneemut_min=" + minY + "&page_size=500")
+        .then(function(r){ return r.json(); })
+        .then(function(j){
+          var v = (j.results || []).filter(function(m){ return m.libnatmut === "Vente" && +m.sbati >= 15 && +m.valeurfonc >= 15000; })
+            .map(function(m){ return +m.valeurfonc / +m.sbati; }).filter(function(x){ return x > 200 && x < 20000; }).sort(function(x,y){ return x-y; });
+          return {v:v, from:minY};
+        });
+    }
+    cache[k] = get(y0).then(function(r){ return r.v.length >= 12 ? r : get(y0 - 3); }).then(function(r){
+      var v = r.v; if (v.length < 6) return null;
+      var q = function(p){ return v[Math.floor(p * (v.length - 1))]; };
+      return {p25:q(.25), med:q(.5), p75:q(.75), n:v.length, from:r.from};
+    });
+    return cache[k];
+  }
+  function showRange(insee, type, surf, commune, etq){
+    if (!insee || !surf) return;
+    dvf(insee, type).then(function(st){
+      if (!st) return;
+      var lo = Math.round(st.p25 * surf / 1000) * 1000, hi = Math.round(st.p75 * surf / 1000) * 1000;
+      $("rg").innerHTML = eur(lo) + " <small>à</small> " + eur(hi);
+      $("rgmeta").textContent = st.n + " ventes de " + (type === "appartement" ? "appartements" : "maisons") + " à " + commune + " depuis " + st.from + " · médiane " + eur(Math.round(st.med)) + "/m² · " + Math.round(surf) + " m²";
+      if (etq === "F" || etq === "G") { $("rgnote").hidden = false; $("rgnote").textContent = "Un logement classé " + etq + " se négocie en général sous la médiane du secteur. Votre conseiller affine le prix selon l'état, les travaux possibles et l'emplacement exact."; }
+      else { $("rgnote").hidden = true; }
+      S.fourchette = eur(lo) + " – " + eur(hi);
+      $("val").hidden = false;
+    }).catch(function(){});
+  }
+
+  /* ---------- Mode 1 : QR du courrier (?d=) ---------- */
   if (d.length > 5) {
-    try { if (!sessionStorage.getItem("s_"+d)) { send({type:"scan"}); sessionStorage.setItem("s_"+d,"1"); } } catch(e){ send({type:"scan"}); }
-    fetch("https://data.ademe.fr/data-fair/api/v1/datasets/dpe03existant/lines?size=1&numero_dpe_eq="+encodeURIComponent(d)+"&select=adresse_ban,etiquette_dpe,type_batiment,surface_habitable_logement,date_etablissement_dpe")
-      .then(function(r){return r.json()}).then(function(j){
+    $("opp").hidden = false;
+    var first = true; try { first = !sessionStorage.getItem("s_" + d); sessionStorage.setItem("s_" + d, "1"); } catch(e){}
+    post({type:"page", d:d, scan: first ? "1" : "0"}).then(function(r){ return r.text(); }).then(brand).catch(function(){});
+    fetch("https://data.ademe.fr/data-fair/api/v1/datasets/dpe03existant/lines?size=1&numero_dpe_eq=" + encodeURIComponent(d) + "&select=adresse_ban,etiquette_dpe,type_batiment,surface_habitable_logement,date_etablissement_dpe,code_insee_ban,nom_commune_ban")
+      .then(function(r){ return r.json(); }).then(function(j){
         var x = j && j.results && j.results[0]; if (!x) return;
-        var e = (x.etiquette_dpe||"").toUpperCase();
-        var lab = document.getElementById("lab"); lab.textContent = e || "?"; if (COL[e]) lab.style.background = COL[e];
-        if (e === "D") lab.style.color = "#0B0E12";
-        document.getElementById("adr").textContent = x.adresse_ban || "";
+        var e = (x.etiquette_dpe || "").toUpperCase(); S.etq = e;
+        var lab = $("lab"); lab.textContent = e || "?"; if (COL[e]) lab.style.background = COL[e]; if (e === "D") lab.style.color = "#0B0E12";
+        $("adr").textContent = x.adresse_ban || ""; S.adresse = x.adresse_ban || "";
         var det = [];
-        if (x.type_batiment) det.push(x.type_batiment.charAt(0).toUpperCase()+x.type_batiment.slice(1));
-        if (x.surface_habitable_logement) det.push(Math.round(x.surface_habitable_logement)+" m²");
-        if (x.date_etablissement_dpe) det.push("DPE du "+x.date_etablissement_dpe.split("-").reverse().join("/"));
-        document.getElementById("det").textContent = det.join(" · ");
-        var ul = document.getElementById("pts");
-        (LOI[e]||[]).forEach(function(t){ var li=document.createElement("li"); li.textContent=t; ul.appendChild(li); });
-        document.getElementById("bien").hidden = false;
+        if (x.type_batiment) det.push(cap(x.type_batiment));
+        if (x.surface_habitable_logement) det.push(Math.round(x.surface_habitable_logement) + " m²");
+        if (x.date_etablissement_dpe) det.push("DPE du " + x.date_etablissement_dpe.split("-").reverse().join("/"));
+        $("det").textContent = det.join(" · "); S.bien = det.join(" · ") + " · DPE " + e;
+        (LOI[e] || []).forEach(function(t){ var li = document.createElement("li"); li.textContent = t; $("pts").appendChild(li); });
+        $("bien").hidden = false;
+        showRange(x.code_insee_ban, x.type_batiment === "appartement" ? "appartement" : "maison", x.surface_habitable_logement, x.nom_commune_ban, e);
       }).catch(function(){});
   } else {
-    document.getElementById("opp").hidden = true;
+    /* ---------- Mode 2 : page Valeur Maison de l'agent (?a=) ---------- */
+    $("saisie").hidden = false;
+    if (a.length > 3) post({type:"page", a:a}).then(function(r){ return r.text(); }).then(brand).catch(function(){});
+    var sel = null, tmr;
+    $("q").addEventListener("input", function(){
+      sel = null; clearTimeout(tmr); var v = this.value.trim();
+      if (v.length < 4) { $("sugg").hidden = true; return; }
+      tmr = setTimeout(function(){
+        fetch("https://api-adresse.data.gouv.fr/search/?type=housenumber&limit=5&q=" + encodeURIComponent(v)).then(function(r){ return r.json(); }).then(function(j){
+          var s = $("sugg"); s.innerHTML = "";
+          (j.features || []).forEach(function(f){
+            var div = document.createElement("div"); div.textContent = f.properties.label;
+            div.onclick = function(){ sel = f.properties; $("q").value = f.properties.label; s.hidden = true; };
+            s.appendChild(div);
+          });
+          s.hidden = !(j.features || []).length;
+        }).catch(function(){});
+      }, 250);
+    });
+    $("fs").addEventListener("submit", function(ev){
+      ev.preventDefault(); $("errs").textContent = "";
+      var surf = +$("su").value, ty = $("ty").value;
+      if (!sel) { $("errs").textContent = "Choisissez votre adresse dans la liste proposée."; return; }
+      if (!(surf >= 9 && surf <= 1000)) { $("errs").textContent = "Indiquez la surface habitable en m²."; return; }
+      S.adresse = sel.label; S.bien = cap(ty) + " · " + Math.round(surf) + " m²";
+      showRange(sel.citycode, ty, surf, sel.city, "");
+      setTimeout(function(){ $("val").scrollIntoView({behavior:"smooth", block:"start"}); }, 600);
+    });
   }
 
-  var f = document.getElementById("f"), err = document.getElementById("err"), go = document.getElementById("go");
+  /* ---------- Demande de rappel ---------- */
+  var f = $("f");
   f.addEventListener("submit", function(ev){
-    ev.preventDefault(); err.textContent = "";
+    ev.preventDefault(); $("err").textContent = "";
     var fd = new FormData(f);
-    var tel = (fd.get("tel")||"").replace(/[^0-9+]/g,"");
-    if (!fd.get("prenom").trim()) { err.textContent = "Indiquez votre prénom."; return; }
-    if (tel.length < 10) { err.textContent = "Indiquez un numéro de téléphone valide."; return; }
-    if (!fd.get("projet") || !fd.get("echeance")) { err.textContent = "Choisissez votre projet et l'échéance."; return; }
-    if (!fd.get("consent")) { err.textContent = "Cochez la case de consentement pour être recontacté."; return; }
-    if (d.length <= 5) { err.textContent = "Lien incomplet : scannez à nouveau le QR code du courrier, ou écrivez à julie@neomandat.fr."; return; }
-    go.disabled = true; go.textContent = "Envoi…";
-    send({type:"demande", prenom:fd.get("prenom").trim(), tel:tel, email:(fd.get("email")||"").trim(), projet:fd.get("projet"), echeance:fd.get("echeance"), consent:"oui"})
-      .then(function(){ f.style.display="none"; document.getElementById("ok").style.display="block"; })
-      .catch(function(){ go.disabled=false; go.textContent="Être rappelé pour mon estimation"; err.textContent="L'envoi a échoué. Réessayez ou écrivez à julie@neomandat.fr."; });
+    var tel = (fd.get("tel") || "").replace(/[^0-9+]/g, "");
+    if (!fd.get("prenom").trim()) { $("err").textContent = "Indiquez votre prénom."; return; }
+    if (tel.length < 10) { $("err").textContent = "Indiquez un numéro de téléphone valide."; return; }
+    if (!fd.get("projet") || !fd.get("echeance")) { $("err").textContent = "Choisissez votre projet et l'échéance."; return; }
+    if (!fd.get("consent")) { $("err").textContent = "Cochez la case de consentement pour être recontacté."; return; }
+    if (a.length <= 3) { $("err").textContent = "Lien incomplet : scannez à nouveau le QR code du courrier, ou écrivez à julie@neomandat.fr."; return; }
+    var go = $("go"), lbl = go.textContent; go.disabled = true; go.textContent = "Envoi…";
+    post({type:"demande", a:a, d:d, adresse:S.adresse, bien:S.bien, fourchette:S.fourchette, prenom:fd.get("prenom").trim(), tel:tel, email:(fd.get("email") || "").trim(), projet:fd.get("projet"), echeance:fd.get("echeance"), consent:"oui"})
+      .then(function(r){ return r.text(); })
+      .then(function(t){ if (t.trim() !== "ok") throw 0; f.style.display = "none"; $("ok").style.display = "block"; })
+      .catch(function(){ go.disabled = false; go.textContent = lbl; $("err").textContent = "L'envoi a échoué. Réessayez ou écrivez à julie@neomandat.fr."; });
   });
 
-  document.getElementById("oppbtn").addEventListener("click", function(){
-    var o = document.getElementById("opp");
-    send({type:"opposition"}).finally(function(){
-      o.textContent = "C'est noté : ce logement ne recevra plus de courrier de notre part.";
-    });
+  $("oppbtn").addEventListener("click", function(){
+    beacon({type:"opposition", d:d}).finally(function(){ $("opp").textContent = "C'est noté : ce logement ne recevra plus de courrier de notre part."; });
   });
 })();
 </script>
