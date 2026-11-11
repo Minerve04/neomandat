@@ -6,7 +6,7 @@
 <title>NeoMandat — Détectez les vendeurs grâce aux DPE F et G | Prospection immobilière automatisée</title>
 <meta name="description" content="NeoMandat repère chaque jour les nouveaux DPE F et G de votre secteur, envoie un courrier à votre nom au propriétaire et transforme sa demande d'estimation en mandat. Secteur exclusif, sans engagement.">
 <link rel="canonical" href="https://neomandat.fr/">
-<meta name="theme-color" content="#0B0E12">
+<meta name="theme-color" content="#F7F5F0">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="preload" as="image" href="https://images.unsplash.com/photo-1620718024338-112b5a0764e7?w=2000&q=70&auto=format&fit=crop">
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1620718024338-112b5a0764e7?w=1600&q=72&auto=format&fit=crop">
 <link rel="stylesheet" href="/style.css">
 <script type="application/ld+json">
 {
@@ -49,7 +49,7 @@
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
 
-<header class="nav-wrap overlay" id="nav">
+<header class="nav-wrap" id="nav">
   <nav class="nav container" aria-label="Navigation principale">
     <a href="/" class="logo" aria-label="NeoMandat, accueil">
       <span class="logo-bars" aria-hidden="true"><i style="height:9px;background:#009C6D"></i><i style="height:13px;background:#A5CC74"></i><i style="height:17px;background:#F0B40F"></i><i style="height:22px;background:#D7221F"></i></span>
@@ -69,9 +69,7 @@
 
 <!-- HERO -->
 <section class="hero" aria-labelledby="h1">
-  <img class="hero-img" src="https://images.unsplash.com/photo-1620718024338-112b5a0764e7?w=2000&q=70&auto=format&fit=crop" alt="Maison en briques au soleil couchant" fetchpriority="high">
-  <div class="hero-shade" aria-hidden="true"></div>
-  <div class="container hero-inner">
+  <div class="hero-text">
     <p class="mono kicker">Radar DPE · Courrier postal · Estimation en ligne</p>
     <h1 id="h1">Les vendeurs de demain ont déjà reçu leur DPE.</h1>
     <p class="hero-lead">Chaque matin, NeoMandat repère les nouveaux DPE F et G de votre secteur, écrit au propriétaire à votre nom et vous livre ses demandes d'estimation.</p>
@@ -80,11 +78,16 @@
       <input id="cp" name="cp" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="Code postal de votre agence" required>
       <button type="submit" class="btn btn-solid">Réserver ce secteur</button>
     </form>
-    <p class="mono form-note" id="cp-msg" role="status">Un secteur = une agence · Confirmation sous 24 h</p>
+    <p class="mono form-note" id="cp-msg" role="status">Un secteur = une agence · Sans engagement</p>
   </div>
-  <div class="container hero-meta mono" aria-hidden="true">
-    <span>Source : base DPE ADEME</span><span>Mise à jour quotidienne</span>
-  </div>
+  <figure class="hero-photo">
+    <img src="https://images.unsplash.com/photo-1620718024338-112b5a0764e7?w=1600&q=72&auto=format&fit=crop" alt="Maison en briques au soleil couchant" fetchpriority="high">
+    <figcaption class="signal-card">
+      <span class="mono sc-head"><span>Nouveau signal</span><span>il y a 2 h</span></span>
+      <span class="sc-row"><b class="g">G</b><span><strong>Maison · 94 m²</strong><br><small>62510 Arques · 1962 · fioul</small></span></span>
+      <span class="mono sc-foot">Courrier posté J+1 → estimation demandée</span>
+    </figcaption>
+  </figure>
 </section>
 
 <!-- TICKER -->
@@ -113,7 +116,7 @@
 </div>
 
 <!-- LOI -->
-<section class="dark section" aria-labelledby="loi">
+<section class="band section" aria-labelledby="loi">
   <div class="container">
     <p class="mono kicker">Loi Climat et Résilience</p>
     <div class="split">
@@ -240,12 +243,14 @@
 
 <!-- CTA -->
 <section class="cta" aria-labelledby="cta-t">
-  <img src="https://images.unsplash.com/photo-1667601080030-b286a6ffeb67?w=2000&q=65&auto=format&fit=crop" alt="" loading="lazy">
-  <div class="cta-shade" aria-hidden="true"></div>
   <div class="container cta-inner">
-    <p class="mono kicker">Exclusivité par code postal</p>
-    <h2 id="cta-t">Votre secteur est peut-être encore libre.</h2>
-    <a href="#reserver" class="btn btn-solid">Vérifier mon code postal</a>
+    <div class="cta-text">
+      <p class="mono kicker">Exclusivité par code postal</p>
+      <h2 id="cta-t">Votre secteur est peut-être encore libre.</h2>
+      <p class="lead-ink">Une seule agence par code postal. Réservez le vôtre avant un concurrent.</p>
+      <a href="#reserver" class="btn btn-solid">Vérifier mon code postal</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1667601080030-b286a6ffeb67?w=1400&q=70&auto=format&fit=crop" alt="Maison de maître en briques au crépuscule" loading="lazy">
   </div>
 </section>
 
