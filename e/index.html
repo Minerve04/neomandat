@@ -60,8 +60,6 @@ button.sec{background:#fff;color:var(--ink);border:1px solid var(--ink);font-siz
 .fine{font-size:13px;color:var(--muted);margin-top:24px}
 .linkbtn{background:none;border:0;padding:0;font:inherit;font-size:13px;text-decoration:underline;color:var(--ink);cursor:pointer;text-transform:none;letter-spacing:0;font-weight:400}
 .linkbtn:hover{filter:none}
-.sugg{border:1px solid var(--line);border-radius:5px;background:#fff;margin-top:-8px;max-height:220px;overflow:auto}
-.sugg div{padding:9px 12px;cursor:pointer;font-size:15px}.sugg div:hover{background:#F4F1EA}
 footer{border-top:1px solid var(--line);max-width:760px;margin:0 auto;padding:18px 20px 30px;font-size:13px;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap}
 footer a{color:var(--muted)}
 .embed .top,.embed footer{display:none}.embed main{padding-top:16px}
@@ -92,8 +90,11 @@ footer a{color:var(--muted)}
 <div class="card" id="saisie" hidden>
   <h2>Votre logement</h2>
   <form id="fs" novalidate autocomplete="off">
-    <label>Adresse<input id="q" placeholder="ex. 12 rue de Dunkerque, Saint-Omer" required></label>
-    <div class="sugg" id="sugg" hidden></div>
+    <label>Adresse<input id="q" placeholder="ex. 12 rue de Dunkerque" required maxlength="120"></label>
+    <div class="row">
+      <label>Code postal<input id="cp" inputmode="numeric" maxlength="5" placeholder="ex. 62500"></label>
+      <label>Commune<select id="cm" disabled><option value="">Saisissez le code postal</option></select></label>
+    </div>
     <div class="row">
       <label>Type
         <select id="ty"><option value="maison">Maison</option><option value="appartement">Appartement</option></select>
@@ -253,29 +254,25 @@ footer a{color:var(--muted)}
     /* ---------- Mode 2 : page Valeur Maison de l'agent (?a=) ---------- */
     $("saisie").hidden = false;
     if (a.length > 3) post({type:"page", a:a}).then(function(r){ return r.text(); }).then(brand).catch(function(){});
-    var sel = null, tmr;
-    $("q").addEventListener("input", function(){
-      sel = null; clearTimeout(tmr); var v = this.value.trim();
-      if (v.length < 4) { $("sugg").hidden = true; return; }
-      tmr = setTimeout(function(){
-        fetch("https://api-adresse.data.gouv.fr/search/?type=housenumber&limit=5&q=" + encodeURIComponent(v)).then(function(r){ return r.json(); }).then(function(j){
-          var s = $("sugg"); s.innerHTML = "";
-          (j.features || []).forEach(function(f){
-            var div = document.createElement("div"); div.textContent = f.properties.label;
-            div.onclick = function(){ sel = f.properties; $("q").value = f.properties.label; s.hidden = true; };
-            s.appendChild(div);
-          });
-          s.hidden = !(j.features || []).length;
-        }).catch(function(){});
-      }, 250);
+    $("cp").addEventListener("input", function(){
+      var v = this.value.replace(/\D/g, ""); this.value = v; var cm = $("cm");
+      if (v.length !== 5) { cm.disabled = true; cm.innerHTML = '<option value="">Saisissez le code postal</option>'; return; }
+      fetch("https://geo.api.gouv.fr/communes?codePostal=" + v + "&fields=nom,code&format=json").then(function(r){ return r.json(); }).then(function(l){
+        cm.innerHTML = ""; l.sort(function(x,y){ return x.nom.localeCompare(y.nom); });
+        l.forEach(function(c){ var o = document.createElement("option"); o.value = c.code; o.textContent = c.nom; cm.appendChild(o); });
+        if (!l.length) cm.innerHTML = '<option value="">Code postal inconnu</option>';
+        cm.disabled = !l.length;
+      }).catch(function(){ cm.innerHTML = '<option value="">Service indisponible, réessayez</option>'; });
     });
     $("fs").addEventListener("submit", function(ev){
       ev.preventDefault(); $("errs").textContent = "";
-      var surf = +$("su").value, ty = $("ty").value;
-      if (!sel) { $("errs").textContent = "Choisissez votre adresse dans la liste proposée."; return; }
+      var surf = +$("su").value, ty = $("ty").value, adr = $("q").value.trim(), cm = $("cm");
+      if (adr.length < 5) { $("errs").textContent = "Indiquez l'adresse du logement."; return; }
+      if (!cm.value) { $("errs").textContent = "Indiquez le code postal puis choisissez la commune."; return; }
       if (!(surf >= 9 && surf <= 1000)) { $("errs").textContent = "Indiquez la surface habitable en m²."; return; }
-      S.adresse = sel.label; S.bien = cap(ty) + " · " + Math.round(surf) + " m²";
-      showRange(sel.citycode, ty, surf, sel.city, "");
+      var commune = cm.options[cm.selectedIndex].textContent;
+      S.adresse = adr + ", " + $("cp").value + " " + commune; S.bien = cap(ty) + " · " + Math.round(surf) + " m²";
+      showRange(cm.value, ty, surf, commune, "");
       setTimeout(function(){ $("val").scrollIntoView({behavior:"smooth", block:"start"}); }, 600);
     });
   }
